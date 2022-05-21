@@ -1,0 +1,30 @@
+﻿@using MvcFirmaCagri.Models.Entity
+@model List<TblCagrilar>
+
+@{
+    ViewBag.Title = "AktifCagrilar";
+    Layout = "~/Views/Shared/FirmaLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Konu</th>
+        <th>Tarih</th>
+        <th>Düzenle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Konu</td>
+            <td>@x.Tarih</td>
+            <td><a href="/Default/CagriGetir/@x.Id" class="btn btn-success">Düzenle</a></td>
+            <td><a href="/Default/CagriDetay/@x.Id/" class="btn btn-info">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<h3>@ViewBag.CagriSayisi</h3>
+
+<a href="/Default/YeniCagri/" class="btn btn-primary">Yeni Çağrı Ekle</a>

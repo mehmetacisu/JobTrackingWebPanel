@@ -1,0 +1,38 @@
+﻿@model MvcFirmaCagri.Models.Entity.TblFirmalar
+@{
+    ViewBag.Title = "ProfilDuzenle";
+    Layout = "~/Views/Shared/FirmaLayout.cshtml";
+}
+
+<h2>Firma Profil Düzenleme</h2>
+
+<br />
+@using (Html.BeginForm("ProfilGuncelle", "Default", FormMethod.Post))
+{
+    @Html.HiddenFor((x => x.Id))
+
+    <br />
+
+    @Html.Label("Firma Adı")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetkili")
+    @Html.TextBoxFor(x => x.Yetkili, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.PasswordFor(x => x.Sifre, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sektör")
+    @Html.TextBoxFor(x => x.Sektor, new { @class = "form-control" })
+    <br />
+    @Html.Label("İl")
+    @Html.TextBoxFor(x => x.il, new { @class = "form-control" })
+    <br />
+    @Html.Label("İlçe")
+    @Html.TextBoxFor(x => x.ilce, new { @class = "form-control" })
+    <br />
+    @Html.Label("Adres")
+    @Html.TextAreaFor(x => x.Adres, 10, 4, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Değişiklikleri Kaydet</button>
+}
