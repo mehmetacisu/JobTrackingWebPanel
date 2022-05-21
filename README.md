@@ -38,11 +38,11 @@
 <br/>
 <hr/>
 
-<hr/>
 
 #### Links
 <a href="https://www.youtube.com/playlist?list=PLKnjBHu2xXNNbaN7oBIE8cSL28h-RMIl6">Course</a>
-<hr/>
+
+
 ## License
 
 [MIT](https://github.com/mehmetacisu/JobTrackingWebPanel/blob/main/LICENSE)
